@@ -1,0 +1,48 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Adres Dev V.1", "Synapse")
+
+local whileloop_Click = false
+local whileloop_diamond = false
+local whileloop_Rockets = false
+local Clickbait = Window:NewTab("Clickbait Simulator")
+local Section = Clickbait:NewSection("Auoto")
+Section:NewToggle("Auto Click || تلقائي ضغط", "Auto Click", function(state)
+    if state then
+        whileloop_Click = true
+        while wait() do 
+            if whileloop_Click == false then
+                return
+            end
+            workspace.MegaTapScript.GetClick2:FireServer()            
+         end
+    else 
+        whileloop_Click = false
+    end
+end)
+Section:NewToggle("Auto Diamond || تلقائي الماس", "Auto Diamond ", function(state)
+    if state then
+        whileloop_diamond = true
+        while wait() do 
+            if whileloop_diamond == false then
+                return
+            end
+            game:GetService("ReplicatedStorage").RemoteEvents.Rebirth1:FireServer()
+        end
+    else 
+        whileloop_diamond = false
+    end
+end)
+Section:NewToggle("Auto Rockets || تلقائي صواريخ ", "Auto Rockets", function(state)
+    if state then
+        hileloop_Rockets  = true
+        while wait() do 
+            if hileloop_Rockets  == false then
+                return
+            end
+            game.Workspace.CCScript.GetClick:FireServer() 
+        end
+    else 
+        hileloop_Rockets  = false
+    end
+end)
+Section:NewLabel("By Adres_Dev :) || User : 7yooso")
